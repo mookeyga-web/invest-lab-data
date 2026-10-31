@@ -1,0 +1,26 @@
+name: weekly-data
+on:
+  schedule:
+    - cron: "30 22 * * 5"   # Friday 22:30 UTC (after the US close; Saturday 00:30/01:30 Israel)
+    - cron: "30 4 * * 6"    # Saturday 04:30 UTC - backup run if Friday failed
+  workflow_dispatch: {}
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install yfinance pandas requests
+      - run: python scripts/fetch_data.py
+      - name: commit data
+        run: |
+          git config user.name "invest-lab-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || git commit -m "data: weekly snapshot $(date -u +%F)"
+          git push

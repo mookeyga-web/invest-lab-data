@@ -17,7 +17,9 @@ jobs:
           python-version: "3.12"
       - run: pip install yfinance pandas requests
       - run: python scripts/fetch_data.py
+        continue-on-error: true
       - name: commit data
+        if: always()
         run: |
           git config user.name "invest-lab-bot"
           git config user.email "actions@users.noreply.github.com"

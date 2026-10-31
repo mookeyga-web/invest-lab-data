@@ -64,13 +64,26 @@ def weekly_prices():
 
 
 def fred(series):
-    url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}"
-    r = requests.get(url, timeout=60, headers={"User-Agent": "invest-lab-data"})
-    r.raise_for_status()
-    df = pd.read_csv(io.StringIO(r.text))
-    df.columns = ["date", "value"]
-    df["value"] = pd.to_numeric(df["value"], errors="coerce")
-    return df.dropna().tail(130)  # ~ last 6 months of daily, years of weekly/monthly
+    """FRED public CSV, limited to the last ~2 years, with retries (FRED can be slow from cloud runners)."""
+    import time
+    cosd = (dt.date.today() - dt.timedelta(days=730)).isoformat()
+    urls = [f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}&cosd={cosd}",
+            f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series}"]
+    last = None
+    for attempt in range(4):
+        url = urls[min(attempt, 1)]
+        try:
+            r = requests.get(url, timeout=(15, 120), headers={
+                "User-Agent": "Mozilla/5.0 (invest-lab-data; research)", "Accept": "text/csv"})
+            r.raise_for_status()
+            df = pd.read_csv(io.StringIO(r.text))
+            df.columns = ["date", "value"]
+            df["value"] = pd.to_numeric(df["value"], errors="coerce")
+            return df.dropna().tail(130)
+        except Exception as e:
+            last = e
+            time.sleep(10 * (attempt + 1))
+    raise last
 
 
 def risk_inputs():

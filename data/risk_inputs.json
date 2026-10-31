@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T12:22:26+00:00",
+ "generated_at": "2026-10-31T13:40:54+00:00",
  "source": "yfinance + FRED via GitHub Actions",
  "fred": {},
  "prices": {
@@ -68,13 +68,13 @@
   "A4_vix_minus_vix3m": -1.36
  },
  "errors": {
-  "BAMLH0A0HYM2": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)",
-  "BAMLC0A0CM": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)",
-  "NFCI": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)",
-  "SAHMREALTIME": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)",
-  "IC4WSA": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)",
-  "CCSA": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)",
-  "T10Y3M": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)",
-  "DGS10": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=60)"
+  "BAMLH0A0HYM2": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=30)",
+  "BAMLC0A0CM": "skipped: FRED unreachable from runner",
+  "NFCI": "skipped: FRED unreachable from runner",
+  "SAHMREALTIME": "skipped: FRED unreachable from runner",
+  "IC4WSA": "skipped: FRED unreachable from runner",
+  "CCSA": "skipped: FRED unreachable from runner",
+  "T10Y3M": "skipped: FRED unreachable from runner",
+  "DGS10": "skipped: FRED unreachable from runner"
  }
 }

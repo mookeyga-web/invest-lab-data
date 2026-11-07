@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T02:08:33+00:00",
+ "generated_at": "2026-11-07T11:14:48+00:00",
  "source": "yfinance + FRED via GitHub Actions",
  "fred": {},
  "prices": {
@@ -40,8 +40,8 @@
   },
   "BZ=F": {
    "last_date": "2026-11-06",
-   "last": 97.76,
-   "ret_3m": 11.45
+   "last": 98.32,
+   "ret_3m": 12.08
   },
   "QQQ": {
    "last_date": "2026-11-06",

@@ -1,71 +1,71 @@
 {
- "generated_at": "2026-11-07T11:14:48+00:00",
+ "generated_at": "2026-11-14T02:34:59+00:00",
  "source": "yfinance + FRED via GitHub Actions",
  "fred": {},
  "prices": {
   "^GSPC": {
-   "last_date": "2026-11-06",
-   "last": 7376.8599,
-   "ret_3m": -4.85
+   "last_date": "2026-11-13",
+   "last": 7561.6699,
+   "ret_3m": -2.37
   },
   "RSP": {
-   "last_date": "2026-11-06",
-   "last": 216.05,
-   "ret_3m": -1.89
+   "last_date": "2026-11-13",
+   "last": 221.16,
+   "ret_3m": 0.17
   },
   "XLY": {
-   "last_date": "2026-11-06",
-   "last": 117.58,
-   "ret_3m": -1.75
+   "last_date": "2026-11-13",
+   "last": 119.98,
+   "ret_3m": 2.77
   },
   "XLP": {
-   "last_date": "2026-11-06",
-   "last": 90.08,
-   "ret_3m": 6.04
+   "last_date": "2026-11-13",
+   "last": 92.35,
+   "ret_3m": 9.06
   },
   "^VIX": {
-   "last_date": "2026-11-06",
-   "last": 25.64,
-   "ret_3m": 67.8
+   "last_date": "2026-11-13",
+   "last": 19.3,
+   "ret_3m": 21.84
   },
   "^VIX3M": {
-   "last_date": "2026-11-06",
-   "last": 24.6,
-   "ret_3m": 29.61
+   "last_date": "2026-11-13",
+   "last": 20.62,
+   "ret_3m": 8.3
   },
   "^TNX": {
-   "last_date": "2026-11-06",
-   "last": 4.859,
-   "ret_3m": 3.4
+   "last_date": "2026-11-13",
+   "last": 5.154,
+   "ret_3m": 9.1
   },
   "BZ=F": {
-   "last_date": "2026-11-06",
-   "last": 98.32,
-   "ret_3m": 12.08
+   "last_date": "2026-11-13",
+   "last": 96.08,
+   "ret_3m": 5.73
   },
   "QQQ": {
-   "last_date": "2026-11-06",
-   "last": 656.1,
-   "ret_3m": -8.98
+   "last_date": "2026-11-13",
+   "last": 679.89,
+   "ret_3m": -6.85
   },
   "MSFT": {
-   "last_date": "2026-11-06",
-   "last": 530.61,
-   "ret_3m": 4.85
+   "last_date": "2026-11-13",
+   "last": 523.88,
+   "ret_3m": 9.06
   },
   "ORCL": {
-   "last_date": "2026-11-06",
-   "last": 116.1,
-   "ret_3m": -23.14
+   "last_date": "2026-11-13",
+   "last": 125.35,
+   "ret_3m": -14.52
   }
  },
  "derived": {
-  "A10_spx_vs_ma10_pct": 0.99,
+  "A10_spx_vs_ma10_pct": 3.52,
   "A10_ma10": 7304.23,
-  "A2_spx_minus_rsp_3m": -2.96,
-  "A3_xly_minus_spx_3m": 3.1,
-  "A3_xly_xlp_vs_ma200_pct": -4.34,
-  "A4_vix_minus_vix3m": 1.04
+  "A2_spx_minus_rsp_3m": -2.54,
+  "A3_xly_minus_spx_3m": 5.14,
+  "A3_xly_xlp_vs_ma200_pct": -4.51,
+  "A4_vix_minus_vix3m": -1.32
  },
  "errors": {
   "BAMLH0A0HYM2": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=30)",

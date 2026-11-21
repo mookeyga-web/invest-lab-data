@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-21T03:20:38+00:00",
+ "generated_at": "2026-11-21T12:54:03+00:00",
  "source": "yfinance + FRED via GitHub Actions",
  "fred": {},
  "prices": {
@@ -26,7 +26,7 @@
   "^VIX": {
    "last_date": "2026-11-20",
    "last": 35.89,
-   "ret_3m": 126.44
+   "ret_3m": 132.3
   },
   "^VIX3M": {
    "last_date": "2026-11-20",
@@ -40,8 +40,8 @@
   },
   "BZ=F": {
    "last_date": "2026-11-20",
-   "last": 89.87,
-   "ret_3m": -2.5
+   "last": 92.57,
+   "ret_3m": 0.43
   },
   "QQQ": {
    "last_date": "2026-11-20",
